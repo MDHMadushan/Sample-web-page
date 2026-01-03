@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Shop</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        /* Image Gallery */
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1); /* simple animation */
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #333;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* List */
+        ul {
+            margin: 20px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>My Simple Shop</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#about">About Us</a>
+    <a href="#contact">Contact</a>
+    <a href="#gallery">Gallery</a>
+</nav>
+
+<main>
+    <section id="home">
+        <h2>Welcome to Our Shop!</h2>
+        <p>We offer a variety of products for your needs. Check out our products below:</p>
+    </section>
+
+    <section id="products">
+        <h2>Our Products</h2>
+        <ul>
+            <li>Fresh Fruits</li>
+            <li>Vegetables</li>
+            <li>Dairy Products</li>
+            <li>Baked Goods</li>
+            <li>Snacks & Beverages</li>
+        </ul>
+
+        <button onclick="showMessage()">Click me for a message</button>
+    </section>
+
+    <section id="table">
+        <h2>Product Prices</h2>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Availability</th>
+            </tr>
+            <tr>
+                <td>Apples</td>
+                <td>$3/kg</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Milk</td>
+                <td>$1.5/litre</td>
+                <td>In Stock</td>
+            </tr>
+            <tr>
+                <td>Bread</td>
+                <td>$2/loaf</td>
+                <td>Out of Stock</td>
+            </tr>
+        </table>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery">
+            <img src="apple.jfif" alt="Image 1">
+            <img src="milk.jpg" alt="Image 2">
+            <img src="bread.jfif" alt="Image 3">
+            <img src="veg.jfif" alt="Image 4">
+            <img src="fruit.jfif" alt="Image 5">
+        </div>
+    </section>
+</main>
+
+<footer style="text-align:center; padding:20px; background:#333; color:white;">
+    <p>&copy; 2026 My Simple Shop</p>
+</footer>
+
+<script>
+    function showMessage() {
+        alert("Welcome to our shop! Enjoy your shopping experience.");
+    }
+</script>
+
+</body>
+</html>
